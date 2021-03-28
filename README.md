@@ -34,7 +34,7 @@ reference.
 
 ## The required blocks
 
-## Block A
+### Block A
 
 This block will show a carousel list of post items. The user can select the
 category (optional) and the amount of posts to show in the carousel, limited to

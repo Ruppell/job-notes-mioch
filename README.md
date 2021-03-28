@@ -1,4 +1,4 @@
-# Gutenburg blocks using ACF
+# Gutenberg blocks using ACF
 
 The development of two custom Gutenberg blocks using ACF. Both blocks must make
 use of plain CSS and **vanilla javascript** when custom functionality is required.

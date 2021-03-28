@@ -50,7 +50,7 @@ related archive.
 
 Please follow the below design for this block:
 
-![block a design](path "./img/block-a.jpg")
+![block a design](./img/block-a.jpg)
 
 ### Block B
 
@@ -62,7 +62,7 @@ it's related blocks will be shown.
 
 Please follow the below design for this block:
 
-![block b design](path "./img/block-b.jpg")
+![block b design](./img/block-b.jpg)
 
 
 The field structure should be something like the below list.

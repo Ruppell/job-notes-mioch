@@ -2,7 +2,8 @@
 
 The development of two custom Gutenberg blocks using ACF. Both blocks must make
 use of plain CSS and **vanilla javascript** when custom functionality is required.
-Both blocks must make use of Bootstrap 5 and should be **mobile responsive**.
+The production theme is based on Bootstrap 5, so please use Bootstrap 5 for
+templating classes and CSS variables.
 
 ## Useful links
 
@@ -13,8 +14,8 @@ Both blocks must make use of Bootstrap 5 and should be **mobile responsive**.
 
 ## File structure
 
-The following file structure should be used, these will be the files that
-needs to be sent back to us.
+The following file structure should be used, these will be the files that needs
+to be sent back to us.
 
 - partials (folder, in theme root.)
 	- blocks.php (file, code for block registration and field. Will be included in themes functions.php)
@@ -40,7 +41,7 @@ This block will show a carousel list of post items. The user can select the
 category (optional) and the amount of posts to show in the carousel, limited to
 24.
 
-This block will also have a button on the top right that will link to the
+This block will also have a button on the top right, that will link to the
 related archive.
 
 #### Features:

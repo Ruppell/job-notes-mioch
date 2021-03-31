@@ -21,5 +21,11 @@ function twentytwenty_child_register_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'twentytwenty_child_register_scripts' );
 
+
+function my_excerpt_length($length){
+return 20;
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+
 require_once("partials/fontawsome-array.php");
 require_once("partials/blocks.php");

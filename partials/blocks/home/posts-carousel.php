@@ -23,15 +23,15 @@
 <div class="splide" id="posts-slider">
  <div class="splide__track">
 
-   <div class="row">
+   <div class="row section-heading-row">
      <div class="col-md-6">
        <?php if ($section_heading) : ?>
          <p class="section-heading"><?php echo $section_heading ?></p>
        <?php endif; ?>
      </div>
-     <div class="col-md-6">
+     <div class="col-md-6 archive-link-container">
        <?php if ($archive_url) : ?>
-         <a class="btn btn-success btn-custom" href="<?php echo $archive_url; ?>">View All <i class="fab fa-chevron-right"></i> </a>
+         <a class="btn btn-success btn-custom archive-link" href="<?php echo $archive_url; ?>">View All <i class="fas fa-chevron-right"></i> </a>
        <?php endif; ?>
      </div>
    </div>
@@ -48,11 +48,11 @@
              ?>
                <li class="splide__slide">
                  <div class="slide-content">
-                   <img src="<?php echo $image_url; ?>" class="post-image" alt="">
+                   <div class="post-image" style="background-image:url(<?php echo $image_url; ?>);"></div>
                    <div class="post-content">
-                     <h5><?php echo $slide_title; ?></h5>
-                     <p><?php echo $excerpt; ?></p>
-                     <a href="<?php echo $post_url; ?>" class="post-link"> Read more </a>
+                     <h3 class="post-title"><?php echo $slide_title; ?></h3>
+                     <p class="post-excerpt"><?php echo $excerpt; ?></p>
+                     <a href="<?php echo $post_url; ?>" class="post-link"> Read more  <i class="fas fa-chevron-right"></i> </a>
                    </div>
                  </div>
 

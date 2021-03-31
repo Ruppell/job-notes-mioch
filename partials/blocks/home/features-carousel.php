@@ -9,6 +9,7 @@
  */
 
  ?>
+<section class="featured-content">
 
 <!-- **********
   Nav icons
@@ -26,8 +27,8 @@
               ?>
                 <li class="splide__slide">
                   <div class="icon-title">
-                    <i class="<?php echo $icon; ?>"></i>
-                    <p><?php echo $slide_title; ?></p>
+                    <i class="<?php echo $icon; ?> icon"></i>
+                    <p class="nav-title"><?php echo $slide_title; ?></p>
                   </div>
                 </li>
               <?php
@@ -64,23 +65,23 @@
                   $image = $image[0];
 
                   ?>
-                  <div class="row">
-                      <div class="col-md-6">
+                  <div class="row feature-item">
+                      <div class="col-md-6 item-details item-content">
                         <div class="bg-color-block"></div>
                         <div class="content-container">
                           <h3><?php echo $heading; ?></h3>
                           <p><?php echo $p_text; ?></p>
-                          <div class="row">
+                          <div class="row action-row">
                             <div class="col-md-6">
-                              <i class="<?php echo $details_icon;?>"></i>
+                              <i class="<?php echo $details_icon;?> content-icon"></i>
                             </div>
-                            <div class="col-md-6">
-                              <a href="<?php echo $url; ?>">Action</a>
+                            <div class="col-md-6 content-btn-container">
+                              <a class="btn btn-outline-success content-btn" href="<?php echo $url; ?>">Action <i class="fas fa-chevron-right"></i></a>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-6 image-container" style="background-image:url('<?php echo $image; ?>');">
+                      <div class="col-md-6 item-image item-content" style="background-image:url('<?php echo $image; ?>');">
 
                       </div>
                   </div>
@@ -97,6 +98,7 @@
   </div>
  </div>
 
+</section>
 
 
 

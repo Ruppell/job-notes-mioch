@@ -2,21 +2,31 @@ document.addEventListener( 'DOMContentLoaded', function () {
   // Create and mount the thumbnails slider.
 var thumbnailsSlider = new Splide( '#thumbnail-slider', {
 	rewind      : true,
-	fixedWidth  : 100,
-	fixedHeight : 64,
+	// fixedWidth  : 100,
+	// fixedHeight : 64,
 	isNavigation: true,
 	gap         : 10,
 	focus       : 'center',
 	pagination  : false,
 	cover       : true,
 	perPage: 7,
+	gap    : '2rem',
 	breakpoints : {
+		'760': {
+			gap    : '2rem',
+			perPage: 4,
+		},
 		'600': {
-			fixedWidth  : 66,
-			fixedHeight : 40,
+			gap    : '3rem',
 			perPage: 3,
+		},
+		'400': {
+			gap    : '2rem',
+			perPage: 2,
 		}
 	}
+
+
 } ).mount();
 
 // Create the main slider.

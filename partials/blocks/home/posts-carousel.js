@@ -3,15 +3,15 @@ document.addEventListener( 'DOMContentLoaded', function () {
     // Create the main slider.
     var postsSlider = new Splide( '#posts-slider', {
     	type       : 'loop',
-    	pagination : true,
+    	pagination : false,
     	arrows     : true,
       rewind     : true,
-      gap    : '1rem',
+      gap    : '2rem',
       perPage: 4,
     	breakpoints: {
-    		'640': {
+    		'789': {
     			perPage: 2,
-    			gap    : '1rem',
+    			gap    : '2rem',
     		},
     		'480': {
     			perPage: 1,

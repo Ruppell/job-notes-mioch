@@ -1,1 +1,4 @@
-
+#posts-slider .splide__track {
+    max-width: 85%;
+    margin: auto;
+}

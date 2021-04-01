@@ -1,26 +1,31 @@
 <?php
 
-    $taxonomies = get_field('taxonomy_terms');
-    $post_count = get_field('posts-count');
-    $section_heading = get_field('section-heading');
-    $archive_url = get_field('archive-url');
+$id = $block['id'];
+if ( ! empty( $block['anchor'] ) ) {
+ $id = $block['anchor'];
+}
 
-    $args = array(
-            'post_type'      => 'post',
-            'post_status'    => 'publish',
-            'posts_per_page' => $post_count,
-            'orderby'        => 'date',
-            'order'          => 'ASC',
-            'cat'            =>  $taxonomies
-    );
+$taxonomies = get_field('taxonomy_terms');
+$post_count = get_field('posts-count');
+$section_heading = get_field('section-heading');
+$archive_url = get_field('archive-url');
 
-    $loop = new WP_Query( $args );
+$args = array(
+        'post_type'      => 'post',
+        'post_status'    => 'publish',
+        'posts_per_page' => $post_count,
+        'orderby'        => 'date',
+        'order'          => 'ASC',
+        'cat'            =>  $taxonomies
+);
+
+$loop = new WP_Query( $args );
 
  ?>
 
 <section class="posts-carousel">
 
-<div class="splide" id="posts-slider">
+<div class="splide posts-slider" id="posts-slider-<?php echo esc_attr( $id ); ?>">
  <div class="splide__track">
 
    <div class="row section-heading-row">
@@ -48,7 +53,9 @@
              ?>
                <li class="splide__slide">
                  <div class="slide-content">
+                   <?php if ($image_url) : ?>
                    <div class="post-image" style="background-image:url(<?php echo $image_url; ?>);"></div>
+                   <?php endif; ?>
                    <div class="post-content">
                      <h3 class="post-title"><?php echo $slide_title; ?></h3>
                      <p class="post-excerpt"><?php echo $excerpt; ?></p>

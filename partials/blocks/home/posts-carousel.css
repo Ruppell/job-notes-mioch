@@ -54,23 +54,23 @@ a i {
   }
 }
 
-#posts-slider .post-image {
+.posts-slider .post-image {
   height: 180px;
   background-size: cover;
   background-position: center center;
 }
-#posts-slider .post-title {
+.posts-slider .post-title {
   color: #686965;
 }
-#posts-slider .post-link {
+.posts-slider .post-link {
   color: #686965;
   margin-top: 2rem;
   display: block;
 }
-#posts-slider .post-link i {
+.posts-slider .post-link i {
   font-size: 12px;
 }
-#posts-slider .splide__track {
+.posts-slider .splide__track {
   max-width: 90%;
   margin: auto;
 }

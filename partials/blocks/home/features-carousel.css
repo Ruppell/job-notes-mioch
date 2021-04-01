@@ -21,7 +21,8 @@ a i {
   margin-bottom: 5rem;
 }
 .featured-content .thumbnail-slider img.icon {
-  width: 50px;
+  width: 60px;
+  height: 60px;
 }
 .featured-content .thumbnail-slider > .splide__track > .splide__list > .splide__slide {
   border: 0px;

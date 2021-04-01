@@ -1,0 +1,93 @@
+p {
+  color: #a4a4a4;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+a {
+  color: #aa4742;
+  text-decoration: none;
+  font-weight: normal;
+}
+a i {
+  margin-left: 1rem;
+}
+
+.section-heading {
+  font-weight: 700;
+  font-size: 22px;
+  color: #aa4742;
+}
+
+.splide__arrow {
+  opacity: 1;
+  background: transparent;
+}
+.splide__arrow svg {
+  fill: #aa4742;
+  width: 10.2em;
+  height: 10.2em;
+}
+
+.btn.btn-custom {
+  font-weight: normal;
+  font-size: 16px;
+  border: 0px;
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+}
+.btn.btn-danger {
+  background-color: #aa4742;
+}
+.btn i {
+  margin-left: 1rem;
+  font-size: 12px;
+}
+
+.section-heading-row {
+  margin-bottom: 2rem;
+}
+@media (min-width: 760px) {
+  .section-heading-row .archive-link-container {
+    text-align: right;
+  }
+}
+
+#posts-slider .post-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center center;
+}
+#posts-slider .post-title {
+  color: #686965;
+}
+#posts-slider .post-link {
+  color: #686965;
+  margin-top: 2rem;
+  display: block;
+}
+#posts-slider .post-link i {
+  font-size: 12px;
+}
+#posts-slider .splide__track {
+  max-width: 90%;
+  margin: auto;
+}
+
+#content-slider-list .image-container {
+  background-size: cover;
+  background-position: center center;
+  min-height: 250px;
+}
+
+@media (max-width: 780px) {
+  .splide__arrow--next {
+    right: -15px;
+  }
+
+  .splide__arrow--prev {
+    left: -15px;
+  }
+}
+/*# sourceMappingURL=posts-carousel.css.map */

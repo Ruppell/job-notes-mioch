@@ -8,6 +8,13 @@
  *     - child_title (Text)
  */
 
+
+ // create id attribute allowing for custom "anchor" value.
+ $id = $block['id'];
+ if ( ! empty( $block['anchor'] ) ) {
+ 	$id = $block['anchor'];
+ }
+
  ?>
 <section class="featured-content">
 
@@ -15,7 +22,7 @@
   Nav icons
 ************* -->
 
- <div class="splide" id="thumbnail-slider">
+ <div class="splide thumbnail-slider" id="thumbnail-slider-<?php echo esc_attr( $id ); ?> ">
   <div class="splide__track">
     <ul class="splide__list">
       <?php
@@ -24,10 +31,17 @@
               // Get parent value.
               $slide_title = get_sub_field('title');
               $icon = get_sub_field('icon');
+              $icon_image = wp_get_attachment_image_src( get_sub_field('icon-image') ,'full') ;
+              $icon_image = $icon_image[0];
               ?>
                 <li class="splide__slide">
                   <div class="icon-title">
-                    <i class="<?php echo $icon; ?> icon"></i>
+                    <?php if ($icon_image) : ?>
+                      <img src="<?php echo $icon_image;?>" class="icon" alt="">
+                    <?php else: ?>
+                      <i class="<?php echo $icon; ?> icon"></i>
+                    <?php endif; ?>
+
                     <p class="nav-title"><?php echo $slide_title; ?></p>
                   </div>
                 </li>
@@ -42,7 +56,7 @@
 <!-- **********
   Content
 ************* -->
- <div class="splide" id="content-slider">
+ <div class="splide content-slider" id="content-slider-<?php echo esc_attr( $id ); ?>">
   <div class="splide__track">
     <ul class="splide__list">
 
@@ -73,7 +87,7 @@
                           <p><?php echo $p_text; ?></p>
                           <div class="row action-row">
                             <div class="col-md-6">
-                              <i class="<?php echo $details_icon;?> content-icon"></i>
+                                <i class="<?php echo $details_icon;?> content-icon"></i>
                             </div>
                             <div class="col-md-6 content-btn-container">
                               <a class="btn btn-outline-success content-btn" href="<?php echo $url; ?>">Action <i class="fas fa-chevron-right"></i></a>

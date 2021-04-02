@@ -196,6 +196,14 @@ function mioch_acf_init_features_carousel_fields() {
                 'choices'       => FONT_AWESOME_ICONS,
 							),
 							array(
+								'key'           => 'slide-icon-image',
+								'name'          => 'icon-image',
+								'label'         => __( 'Icon image', 'mioch_flex' ),
+								'type'          => 'image',
+								'return_format' => 'id',
+								'preview_size'  => 'medium',
+							),
+							array(
 								'key'           => 'slide-details',
 								'name'          => 'details',
 								'label'         => __( 'Details', 'mioch_flex' ),
